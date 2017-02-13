@@ -2,22 +2,22 @@ import Show
 show=Show.Show()
 
 A = []
-B = []
+B = []  #HanoiStacks
 C = []
 
 
 
-
+#From one stact To second using third (Help), #num - amount of items
 def RecHanoi (num, From=A, To=C, Help=B): #basic rec solution
 	if num==1:
 		show.MakeAMove(From, To, A, B, C)
 	else:
-		RecHanoi(num-1, From, Help, To)
+		RecHanoi(num-1, From, Help, To)  
 		show.MakeAMove(From, To, A, B, C)
 		RecHanoi(num-1, Help, To, From)
 
 class task:  #tasks to be make in loop 
-	def __init__(self, num, From, To, Help):
+	def __init__(self, num, From, To, Help):  #From one stact To second using third (Help), #num - amount of items
 		self.From=From;
 		self.To=To;
 		self.Help=Help;
